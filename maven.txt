@@ -1,0 +1,7 @@
+1. maven下载
+http://maven.apache.org/download.cgi
+2. maven环境变量配置：
+https://jingyan.baidu.com/article/cb5d61050b8ee7005d2fe04e.html
+3. git使用
+安装：https://git-scm.com/book/zh/v2
+下载：https://git-scm.com/download/win
