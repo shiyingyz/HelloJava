@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.niit.com.mapper.InfoDao">
+	<select id="queryInfos" resultType="org.niit.com.bean.Info">
+		select * from `info`
+    </select>
+    
+    <select id="queryInfo" parameterType="int" resultType="org.niit.com.bean.Info">
+		select * from `info` where id = #{id}
+    </select>
+    
+    <select id="login" parameterType="org.niit.com.bean.Info" resultType="org.niit.com.bean.Info">
+		select * from `info` where name = #{name} and intro=#{intro}
+    </select>
+    
+    <insert id="insertInfo">
+	  insert into info (name,intro)
+	  values (#{name},#{intro})
+	</insert>
+	
+    <!-- #{name} 是mybatis的bean属性的固定匹配模式。 -->
+	<update id="updateInfo">
+	  update info set
+	    name = #{name},
+	    intro = #{intro}
+	  where id = #{id}
+	</update>
+
+	<delete id="deleteInfo">
+	  delete from info where id = #{id}
+	</delete>
+</mapper>
